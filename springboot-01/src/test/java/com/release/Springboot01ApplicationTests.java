@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class Springboot01ApplicationTests {
 
     @Test
-    void contextLoads() {
+    void test() {
+        System.out.println("1111");
     }
 
 }

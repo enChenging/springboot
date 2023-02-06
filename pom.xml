@@ -8,21 +8,36 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- 仓库配置 -->
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun public</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>ustc</id>
+            <name>nexus ustc</name>
+            <url>https://maven.proxy.ustclug.org/maven2/</url>
+        </repository>
+    </repositories>
+
     <modules>
         <module>springboot-01</module>
         <module>springboot-02-web</module>
         <module>springboot-03-redis</module>
+        <module>springboot-05-security</module>
+        <module>springboot-06</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <junit.version>4.13.2</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.24</lombok.version>
         <springboot.version>2.7.1</springboot.version>
-        <springcloud.version>2021.0.3</springcloud.version>
+        <springcloud.version>2020.0.3</springcloud.version>
     </properties>
 
     <dependencyManagement>
@@ -43,17 +58,11 @@
                 <version>8.0.29</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>1.2.9</version>
-            </dependency>
-
             <!--springboot启动器-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.2.2</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.4.3</version>
             </dependency>
 
             <!--lombok-->
@@ -79,8 +88,21 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
+                <version>3.8.2</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>2.0.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.7.17</version>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>

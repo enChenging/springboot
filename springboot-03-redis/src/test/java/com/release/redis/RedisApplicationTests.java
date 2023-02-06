@@ -36,7 +36,7 @@ class RedisApplicationTests {
 
     @Test
     void testDelUser() {
-        Object andDelete = redisTemplate.opsForValue().getAndDelete("user:2");
+        Object andDelete = redisTemplate.opsForValue().getOperations().delete("user:2");
         System.out.println("andDelete = " + andDelete);
     }
 
