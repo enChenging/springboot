@@ -40,6 +40,11 @@ public final class Result<T> {
     private T data;
 
 
+    public Result(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
     /**
      * 正确返回
      *

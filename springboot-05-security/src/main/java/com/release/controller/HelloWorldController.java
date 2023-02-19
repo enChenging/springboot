@@ -19,9 +19,17 @@ public class HelloWorldController {
     private IUserService studentService;
 
     @RequestMapping("/hello")
-    @PreAuthorize(value = "hasAuthority('manager:index')")
+//    @PreAuthorize(value = "hasAuthority('manager:index')")
+    //自定义权限校验方法
+    @PreAuthorize("@re.hasAuthorized('manager:index')")
     public Result<String> hello(){
 //        StudentVO studentInfo = studentService.getStudentInfo();
         return Result.ok("hello");
     }
+
+    @RequestMapping("/menu")
+    public Result<String> menu(){
+        return Result.ok("菜单");
+    }
+
 }
