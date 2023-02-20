@@ -8,6 +8,7 @@
 ![在这里插入图片描述](image/security_02.png)
 
 ### SpringSecurity 认证流程详解
+![在这里插入图片描述](image/security_03.png)
 ![在这里插入图片描述](image/security_03_1.png)
 
 ### SpringSecurity JWT认证过滤器
