@@ -28,7 +28,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public StudentVO getStudentInfo() {
         User stu = this.getOne(Wrappers.<User>lambdaQuery()
-                .eq(User::getStudentName, "zs"));
+                .eq(User::getUserName, "zs"));
         StudentVO studentVO = new StudentVO();
         BeanUtil.copyProperties(stu,studentVO);
         return studentVO;

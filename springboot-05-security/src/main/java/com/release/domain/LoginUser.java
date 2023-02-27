@@ -68,7 +68,7 @@ public class LoginUser implements Serializable, UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getStudentName();
+        return user.getUserName();
     }
 
     /**

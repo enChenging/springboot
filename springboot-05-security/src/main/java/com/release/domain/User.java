@@ -24,10 +24,10 @@ public class User {
     private Long id;
 
     /**
-     * 学生姓名
+     * 用户姓名
      */
-    @TableField("student_name")
-    private String studentName;
+    @TableField("user_name")
+    private String userName;
 
 
     /**
@@ -49,27 +49,6 @@ public class User {
      */
     @TableField("password")
     private String password;
-
-
-    /**
-     * 学情分析考号(带JN)
-     */
-    @TableField("analysis_no")
-    private String analysisNo;
-
-
-    /**
-     * 学生考号(不带JN)
-     */
-    @TableField("student_exam_no")
-    private String studentExamNo;
-
-
-    /**
-     * 年级
-     */
-    @TableField("year_name")
-    private Integer yearName;
 
 
     /**

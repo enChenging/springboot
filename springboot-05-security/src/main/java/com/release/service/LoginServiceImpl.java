@@ -35,13 +35,13 @@ public class LoginServiceImpl  implements LoginService {
 
     /**
      * 登录
-     * @param student
+     * @param user
      * @return
      */
     @Override
-    public Result<TokenVO> login(User student) {
+    public Result<TokenVO> login(User user) {
         //AuthenticationManager 调用authenticate进行用户认证，就会调用loadUserByUsername方法查询用户
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(student.getStudentName(), student.getPassword());
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
         //如果认证没通过，给出对应的提示
         if (Objects.isNull(authenticate)) {

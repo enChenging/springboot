@@ -32,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(User::getStudentName, username);
+        queryWrapper.lambda().eq(User::getUserName, username);
         User user = studentMapper.selectOne(queryWrapper);
         if (user == null) {
             throw new BaseServiceException("用户名或者密码错误");
