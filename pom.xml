@@ -27,7 +27,7 @@
         <module>springboot-02-web</module>
         <module>springboot-03-redis</module>
         <module>springboot-05-security</module>
-        <module>springboot-06</module>
+        <module>springboot-06-mongodb</module>
     </modules>
 
     <properties>
