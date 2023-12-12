@@ -17,7 +17,7 @@ import java.util.Date;
 
 @Data
 @Accessors(chain = true)
-@TableName("auth_user")
+@TableName("user")
 public class User {
 
     @TableId
@@ -31,47 +31,10 @@ public class User {
 
 
     /**
-     * 学校id
-     */
-    @TableField("school_id")
-    private Long schoolId;
-
-
-    /**
-     * 身份证号
-     */
-    @TableField("id_card")
-    private String idCard;
-
-
-    /**
      * 密码
      */
     @TableField("password")
     private String password;
 
 
-    /**
-     * 上次登录时间
-     */
-    @TableField("login_time")
-    private Date loginTime;
-
-    /**
-     * 是否删除0否1是
-     */
-    @TableField("is_deleted")
-    private Integer isDeleted;
-
-    /**
-     * 班级名
-     */
-    @TableField(exist = false)
-    private String classroomName;
-
-    /**
-     * 赋分总成绩
-     */
-    @TableField(exist = false)
-    private BigDecimal weightCityScore;
 }

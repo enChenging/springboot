@@ -24,7 +24,7 @@ import java.util.List;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
-    private UserMapper studentMapper;
+    private UserMapper userMapper;
 
     @Resource
     private MenuMapper menuMapper;
@@ -33,7 +33,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(User::getUserName, username);
-        User user = studentMapper.selectOne(queryWrapper);
+        User user = userMapper.selectOne(queryWrapper);
         if (user == null) {
             throw new BaseServiceException("用户名或者密码错误");
         }

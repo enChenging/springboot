@@ -22,6 +22,8 @@ public class LoginController {
 
     /**
      * 登录
+     * 密码传：123
+     * 数据库密码对应的是加密后的 $2a$10$VGWEhKE7EsUXpzz84Q/WZOzw5iEd9Y.vNh/IOYzZx17fSCK2p9pnG
      * @param student
      * @return
      */

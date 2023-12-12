@@ -6,6 +6,7 @@ import com.release.handler.AuthenticationEntryPointImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -37,10 +38,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private AccessDeniedHandlerImpl accessDeniedHandler;
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService);
-//    }
+    /**
+     * 定义认证规则
+     * @param auth the {@link AuthenticationManagerBuilder} to use
+     * @throws Exception
+     */
+   /* @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        //在内存中定义，也可以在jdbc中去拿....
+        auth.inMemoryAuthentication()
+                .withUser("kuangshen").password("123456").roles("vip2","vip3")
+                .and()
+                .withUser("root").password("123456").roles("vip1","vip2","vip3")
+                .and()
+                .withUser("guest").password("123456").roles("vip1","vip2");
+    }*/
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

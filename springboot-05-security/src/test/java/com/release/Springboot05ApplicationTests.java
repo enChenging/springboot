@@ -29,8 +29,9 @@ class Springboot05ApplicationTests {
 //        log.info("contextLoads: {}", studentInfo);
 //
         String encode = bcrypt.encode("123");
+        log.info("encode: {}", encode);
         String encode1 = bcrypt.encode("123");
-        log.info("encode: {}", encode);log.info("encode1: {}", encode1);
+        log.info("encode1: {}", encode1);
 
         boolean matches = bcrypt.matches("123", "$2a$10$QvUb0uO030w9jQonrbknE.0IWDPYOt3DelkuByBhJvRxQ1OZb3OUK");
         log.info("matches: {}", matches);
